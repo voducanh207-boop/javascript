@@ -3,45 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Photo Gallery</title>
+  <title>Responsive Web Design Homework</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
 </head>
 <body>
   <header>
-    <h1>Interactive Photo Gallery</h1>
+    <h1>Responsive Web Design</h1>
+    <p>Resize the browser window to see the layout change.</p>
   </header>
 
-  <main>
-    <div id="image" role="img" aria-live="polite">
-      Hover over or focus on an image below to display here.
+  <main class="container">
+    <div class="card">
+      <img src="images/one.svg" alt="Red and orange gradient">
+      <h2>Card One</h2>
+      <p>Mobile first: one column on small screens.</p>
     </div>
 
-    <section class="gallery" aria-label="Photo thumbnails">
-      <img class="preview" src="images/sunset.svg" alt="Orange sunset over a calm ocean"
-           onmouseover="upDate(this)" onmouseleave="unDo()"
-           onfocus="upDate(this)" onblur="unDo()">
+    <div class="card">
+      <img src="images/two.svg" alt="Dark blue gradient">
+      <h2>Card Two</h2>
+      <p>At 600px and up, cards sit in two columns.</p>
+    </div>
 
-      <img class="preview" src="images/forest.svg" alt="Green forest with tall pine trees"
-           onmouseover="upDate(this)" onmouseleave="unDo()"
-           onfocus="upDate(this)" onblur="unDo()">
+    <div class="card">
+      <img src="images/three.svg" alt="Teal gradient">
+      <h2>Card Three</h2>
+      <p>At 1000px and up, cards sit in three columns.</p>
+    </div>
 
-      <img class="preview" src="images/ocean.svg" alt="Deep blue ocean waves"
-           onmouseover="upDate(this)" onmouseleave="unDo()"
-           onfocus="upDate(this)" onblur="unDo()">
+    <div class="card">
+      <img src="images/four.svg" alt="Purple gradient">
+      <h2>Card Four</h2>
+      <p>Widths use percentages, so they stay fluid.</p>
+    </div>
 
-      <img class="preview" src="images/desert.svg" alt="Golden sand dunes in the desert"
-           onmouseover="upDate(this)" onmouseleave="unDo()"
-           onfocus="upDate(this)" onblur="unDo()">
+    <div class="card">
+      <img src="images/five.svg" alt="Yellow gradient">
+      <h2>Card Five</h2>
+      <p>Images scale with their container.</p>
+    </div>
 
-      <img class="preview" src="images/mountain.svg" alt="Purple mountains at dusk"
-           onmouseover="upDate(this)" onmouseleave="unDo()"
-           onfocus="upDate(this)" onblur="unDo()">
-
-      <img class="preview" src="images/city.svg" alt="Gray city skyline at night"
-           onmouseover="upDate(this)" onmouseleave="unDo()"
-           onfocus="upDate(this)" onblur="unDo()">
-    </section>
+    <div class="card">
+      <img src="images/six.svg" alt="Dark teal gradient">
+      <h2>Card Six</h2>
+      <p>Built with two media queries.</p>
+    </div>
   </main>
 </body>
 </html>
