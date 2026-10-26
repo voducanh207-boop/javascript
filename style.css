@@ -1,54 +1,102 @@
-/* Base styles = mobile view (one column) */
+/* ---------- Mobile view (mobile first, no media query) ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 1rem;
-  background: #f4f4f4;
-  color: #222;
+  background-color: #f4f4f4;
+  color: #222222;
 }
 
-header {
+header,
+footer {
   text-align: center;
-  margin-bottom: 1rem;
 }
 
-.container {
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
 }
 
-.card {
-  width: 100%;
-  background: #fff;
-  border-radius: 8px;
+a {
+  color: #0b4fa8;
+}
+
+/* One column grid with a 10px gap between rows and columns */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 1rem 0;
+}
+
+figure {
+  margin: 0;
   padding: 1rem;
-  margin-bottom: 1rem;
   box-sizing: border-box;
+  overflow: hidden;
+  background-color: #ffffff;
+  color: #222222;
+  border: 3px solid #767676;
 }
 
-.card img {
+figure img {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
-  border-radius: 6px;
 }
 
-/* Media query 1 (step 5): tablet - two columns, adjust divs and images */
-@media (min-width: 600px) {
-  .card {
-    width: 48%;
+figure p {
+  margin: 0.75rem 0 0;
+}
+
+/* ---------- Tablet view ---------- */
+@media (min-width: 772px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .card img {
-    height: 200px;
-    object-fit: cover;
+  figure {
+    border-radius: 50%;
+    padding: 3rem;
+  }
+
+  figure:last-child {
+    grid-column: span 2;
   }
 }
 
-/* Media query 2 (step 7): desktop - three columns, adjust divs */
-@media (min-width: 1000px) {
-  .card {
-    width: 31%;
+/* ---------- Large screen view ---------- */
+@media (min-width: 992px) {
+  figure {
+    border-radius: 0;
+  }
+
+  figure:nth-child(3n) {
+    grid-column: span 2;
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ---------- Dark colors ---------- */
+@media (prefers-color-scheme: dark) {
+  figure {
+    background-color: #1a1a1a;
+    color: #ffe066;
+    border-color: #000000;
   }
 }

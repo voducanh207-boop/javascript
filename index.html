@@ -3,51 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Web Design Homework</title>
+  <title>Nature Scenes Gallery</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="top">
   <header>
-    <h1>Responsive Web Design</h1>
-    <p>Resize the browser window to see the layout change.</p>
+    <h1>Nature Scenes Gallery</h1>
+    <nav aria-label="Jump to a scene">
+      <ul>
+        <li><a href="#scene1">Mountains</a></li>
+        <li><a href="#scene2">Ocean</a></li>
+        <li><a href="#scene3">Forest</a></li>
+        <li><a href="#scene4">Desert</a></li>
+        <li><a href="#scene5">City</a></li>
+        <li><a href="#scene6">Night</a></li>
+        <li><a href="#scene7">Meadow</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="container">
-    <div class="card">
-      <img src="images/one.svg" alt="Red and orange gradient">
-      <h2>Card One</h2>
-      <p>Mobile first: one column on small screens.</p>
-    </div>
+  <main class="grid">
+    <figure id="scene1">
+      <img src="images/mountains.svg" alt="Snow-capped gray mountains under a bright blue sky">
+      <p>Tall mountains rise above the valley while the sun warms the peaks.</p>
+    </figure>
 
-    <div class="card">
-      <img src="images/two.svg" alt="Dark blue gradient">
-      <h2>Card Two</h2>
-      <p>At 600px and up, cards sit in two columns.</p>
-    </div>
+    <figure id="scene2">
+      <img src="images/ocean.svg" alt="Orange sun setting over layered blue ocean waves">
+      <p>Gentle waves roll toward the shore as the day comes to an end.</p>
+    </figure>
 
-    <div class="card">
-      <img src="images/three.svg" alt="Teal gradient">
-      <h2>Card Three</h2>
-      <p>At 1000px and up, cards sit in three columns.</p>
-    </div>
+    <figure id="scene3">
+      <img src="images/forest.svg" alt="Row of dark green pine trees in a forest">
+      <p>Pine trees stand close together, giving shade and shelter to wildlife.</p>
+    </figure>
 
-    <div class="card">
-      <img src="images/four.svg" alt="Purple gradient">
-      <h2>Card Four</h2>
-      <p>Widths use percentages, so they stay fluid.</p>
-    </div>
+    <figure id="scene4">
+      <img src="images/desert.svg" alt="Golden sand dunes beneath a pale yellow sun">
+      <p>Warm dunes stretch across the desert in soft, rolling shapes.</p>
+    </figure>
 
-    <div class="card">
-      <img src="images/five.svg" alt="Yellow gradient">
-      <h2>Card Five</h2>
-      <p>Images scale with their container.</p>
-    </div>
+    <figure id="scene5">
+      <img src="images/city.svg" alt="City skyline at dusk with lit windows in tall buildings">
+      <p>The city lights switch on one by one as evening settles in.</p>
+    </figure>
 
-    <div class="card">
-      <img src="images/six.svg" alt="Dark teal gradient">
-      <h2>Card Six</h2>
-      <p>Built with two media queries.</p>
-    </div>
+    <figure id="scene6">
+      <img src="images/night.svg" alt="Pale moon and small white stars in a deep blue night sky">
+      <p>A quiet night sky filled with stars and a glowing moon.</p>
+    </figure>
+
+    <figure id="scene7">
+      <img src="images/meadow.svg" alt="Green meadow dotted with pink, purple and orange flowers">
+      <p>Wildflowers bloom across a green meadow on a sunny spring day.</p>
+    </figure>
   </main>
+
+  <footer>
+    <a href="#top">Back to top</a>
+  </footer>
 </body>
 </html>
