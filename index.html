@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Photo Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Interactive Photo Gallery</h1>
+  </header>
+
+  <main>
+    <div id="image" role="img" aria-live="polite">
+      Hover over or focus on an image below to display here.
+    </div>
+
+    <section class="gallery" aria-label="Photo thumbnails">
+      <img class="preview" src="images/sunset.svg" alt="Orange sunset over a calm ocean"
+           onmouseover="upDate(this)" onmouseleave="unDo()"
+           onfocus="upDate(this)" onblur="unDo()">
+
+      <img class="preview" src="images/forest.svg" alt="Green forest with tall pine trees"
+           onmouseover="upDate(this)" onmouseleave="unDo()"
+           onfocus="upDate(this)" onblur="unDo()">
+
+      <img class="preview" src="images/ocean.svg" alt="Deep blue ocean waves"
+           onmouseover="upDate(this)" onmouseleave="unDo()"
+           onfocus="upDate(this)" onblur="unDo()">
+
+      <img class="preview" src="images/desert.svg" alt="Golden sand dunes in the desert"
+           onmouseover="upDate(this)" onmouseleave="unDo()"
+           onfocus="upDate(this)" onblur="unDo()">
+
+      <img class="preview" src="images/mountain.svg" alt="Purple mountains at dusk"
+           onmouseover="upDate(this)" onmouseleave="unDo()"
+           onfocus="upDate(this)" onblur="unDo()">
+
+      <img class="preview" src="images/city.svg" alt="Gray city skyline at night"
+           onmouseover="upDate(this)" onmouseleave="unDo()"
+           onfocus="upDate(this)" onblur="unDo()">
+    </section>
+  </main>
+</body>
+</html>
